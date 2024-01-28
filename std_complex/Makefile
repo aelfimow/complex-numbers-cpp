@@ -17,5 +17,6 @@ CXXFLAGS += -fext-numeric-literals
 LDFLAGS = -lquadmath
 
 all:
+	${CXX} -c Beispiel_5_1.cpp -o Beispiel_5_1.o ${CXXFLAGS}
 	${CXX} -c main.cpp -o main.o ${CXXFLAGS}
-	${CXX} main.o -o main.exe ${LDFLAGS}
+	${CXX} Beispiel_5_1.o main.o -o main.exe ${LDFLAGS}
