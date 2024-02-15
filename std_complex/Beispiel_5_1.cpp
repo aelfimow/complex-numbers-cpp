@@ -19,4 +19,11 @@ void Beispiel_5_1()
         std::cout << z << std::endl;
         std::cout << "Re(z) = " << z.real() << ", Im(z) = " << z.imag() << std::endl;
     }
+    // Using: long double
+    {
+        std::complex<long double> z = 3.0L + 7.0iL;
+
+        std::cout << z << std::endl;
+        std::cout << "Re(z) = " << z.real() << ", Im(z) = " << z.imag() << std::endl;
+    }
 }
