@@ -45,6 +45,10 @@ namespace
  */
 void Beispiel_5_1()
 {
+    std::cout << std::endl;
+    std::cout << "z = 3 + 7i" << std::endl;
+
+    // z = 3 + 7i
     // Using: float
     {
         std::complex<float> z = 3.0f + 7.0if;
@@ -69,6 +73,39 @@ void Beispiel_5_1()
     // Using: __float128
     {
         std::complex<__float128> z(3.0Q, 7.0Q);
+
+        std::cout << to_string(z) << std::endl;
+        std::cout << "Re(z) = " << to_string(z.real()) << ", Im(z) = " << to_string(z.imag()) << std::endl;
+    }
+
+    std::cout << std::endl;
+    std::cout << "z = -3 - 7i" << std::endl;
+
+    // z = -3 - 7i
+    // Using: float
+    {
+        std::complex<float> z = -3.0f + -7.0if;
+
+        std::cout << z << std::endl;
+        std::cout << "Re(z) = " << z.real() << ", Im(z) = " << z.imag() << std::endl;
+    }
+    // Using: double
+    {
+        std::complex<double> z = -3.0 + -7.0i;
+
+        std::cout << z << std::endl;
+        std::cout << "Re(z) = " << z.real() << ", Im(z) = " << z.imag() << std::endl;
+    }
+    // Using: long double
+    {
+        std::complex<long double> z = -3.0L + -7.0iL;
+
+        std::cout << z << std::endl;
+        std::cout << "Re(z) = " << z.real() << ", Im(z) = " << z.imag() << std::endl;
+    }
+    // Using: __float128
+    {
+        std::complex<__float128> z(-3.0Q, -7.0Q);
 
         std::cout << to_string(z) << std::endl;
         std::cout << "Re(z) = " << to_string(z.real()) << ", Im(z) = " << to_string(z.imag()) << std::endl;
