@@ -1,7 +1,8 @@
+#include "Beispiel_5_1.h"
+#include "Helper.h"
+
 #include <complex>
 #include <iostream>
-
-#include "Helper.h"
 
 using namespace std::complex_literals;
 
@@ -50,21 +51,21 @@ void Beispiel_5_1()
     // z = -3 - 7i
     // Using: float
     {
-        std::complex<float> z = -3.0f + -7.0if;
+        std::complex<float> z = -3.0f - 7.0if;
 
         std::cout << z << std::endl;
         std::cout << "Re(z) = " << z.real() << ", Im(z) = " << z.imag() << std::endl;
     }
     // Using: double
     {
-        std::complex<double> z = -3.0 + -7.0i;
+        std::complex<double> z = -3.0 - 7.0i;
 
         std::cout << z << std::endl;
         std::cout << "Re(z) = " << z.real() << ", Im(z) = " << z.imag() << std::endl;
     }
     // Using: long double
     {
-        std::complex<long double> z = -3.0L + -7.0iL;
+        std::complex<long double> z = -3.0L - 7.0iL;
 
         std::cout << z << std::endl;
         std::cout << "Re(z) = " << z.real() << ", Im(z) = " << z.imag() << std::endl;
@@ -113,7 +114,7 @@ void Beispiel_5_1()
     std::cout << std::endl;
     std::cout << "z = 12" << std::endl;
 
-    // z = 2i
+    // z = 12
     // Using: float
     {
         std::complex<float> z = 12.0f;
