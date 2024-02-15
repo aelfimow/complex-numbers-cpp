@@ -1,3 +1,4 @@
-Beispiel_5_1.o: Beispiel_5_1.cpp Helper.h
+Beispiel_5_1.o: Beispiel_5_1.cpp Beispiel_5_1.h Helper.h
+Beispiel_5_2.o: Beispiel_5_2.cpp Beispiel_5_2.h Helper.h
 Helper.o: Helper.cpp Helper.h
 main.o: main.cpp Beispiel_5_1.h
