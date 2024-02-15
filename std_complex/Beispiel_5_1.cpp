@@ -31,7 +31,7 @@ namespace
 
         str.append("(");
         str.append(to_string(value.real()));
-        str.append(",");
+        str.append(", ");
         str.append(to_string(value.imag()));
         str.append(")");
 
