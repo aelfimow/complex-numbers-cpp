@@ -19,8 +19,10 @@ LDFLAGS = -lquadmath
 FILES = $(wildcard *.cpp)
 FILES_OBJ = $(FILES:.cpp=.o)
 
-all:
+all: compile
 	${CXX} ${FILES_OBJ} -o main.exe ${LDFLAGS}
+
+compile: $(FILES_OBJ)
 
 deps:
 	${CXX} -MM ${FILES} > Makefile.files
