@@ -16,8 +16,13 @@ CXXFLAGS += -fext-numeric-literals
 
 LDFLAGS = -lquadmath
 
+FILES = $(wildcard *.cpp)
+FILES_OBJ = $(FILES:.cpp=.o)
+
 all:
-	${CXX} -c Helper.cpp -o Helper.o ${CXXFLAGS}
-	${CXX} -c Beispiel_5_1.cpp -o Beispiel_5_1.o ${CXXFLAGS}
-	${CXX} -c main.cpp -o main.o ${CXXFLAGS}
-	${CXX} Beispiel_5_1.o main.o -o main.exe ${LDFLAGS}
+	${CXX} ${FILES_OBJ} -o main.exe ${LDFLAGS}
+
+deps:
+	${CXX} -MM ${FILES} > Makefile.files
+
+include Makefile.files
