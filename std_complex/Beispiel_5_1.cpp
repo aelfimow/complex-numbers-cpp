@@ -143,4 +143,37 @@ void Beispiel_5_1()
         std::cout << to_string(z) << std::endl;
         std::cout << "Re(z) = " << to_string(z.real()) << ", Im(z) = " << to_string(z.imag()) << std::endl;
     }
+
+    std::cout << std::endl;
+    std::cout << "z = 12" << std::endl;
+
+    // z = 2i
+    // Using: float
+    {
+        std::complex<float> z = 12.0f;
+
+        std::cout << z << std::endl;
+        std::cout << "Re(z) = " << z.real() << ", Im(z) = " << z.imag() << std::endl;
+    }
+    // Using: double
+    {
+        std::complex<double> z = 12.0;
+
+        std::cout << z << std::endl;
+        std::cout << "Re(z) = " << z.real() << ", Im(z) = " << z.imag() << std::endl;
+    }
+    // Using: long double
+    {
+        std::complex<long double> z = 12.0L;
+
+        std::cout << z << std::endl;
+        std::cout << "Re(z) = " << z.real() << ", Im(z) = " << z.imag() << std::endl;
+    }
+    // Using: __float128
+    {
+        std::complex<__float128> z(12.0Q, 0.0Q);
+
+        std::cout << to_string(z) << std::endl;
+        std::cout << "Re(z) = " << to_string(z.real()) << ", Im(z) = " << to_string(z.imag()) << std::endl;
+    }
 }
