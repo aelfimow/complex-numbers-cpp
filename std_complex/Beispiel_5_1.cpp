@@ -3,6 +3,10 @@
 
 using namespace std::complex_literals;
 
+/**
+ * \brief Beispiel 5.1 (p. 297)
+ * \see Book1.md
+ */
 void Beispiel_5_1()
 {
     // Using: float
