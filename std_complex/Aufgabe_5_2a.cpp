@@ -8,7 +8,7 @@
 using namespace std::complex_literals;
 
 /**
- * \brief Beispiel 5.1 (p. 300)
+ * \brief Aufgabe 5.2a (p. 300)
  * \see Book1.md
  */
 void Aufgabe_5_2a()
