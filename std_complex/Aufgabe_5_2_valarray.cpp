@@ -67,4 +67,31 @@ void Aufgabe_5_2_valarray()
             std::cout << z << ": " << rho << std::endl;
         }
     }
+
+    // Using long double
+    {
+        long double const a = 1.0L;
+
+        using cldouble = std::complex<long double>;
+
+        std::valarray<cldouble> const zs
+        {
+            2.0L + 3.0iL,
+            2.0L - 3.0iL,
+            { ::sqrtl(2.0L), ::sqrtl(7.0L) },
+            { a, a },
+            4.0iL,
+            -2.0L - 2.0iL
+        };
+
+        std::valarray<cldouble> const rhos = std::abs(zs);
+
+        for (size_t i = 0U; i < zs.size(); ++i)
+        {
+            cldouble const &z = zs[i];
+            cldouble const &rho = rhos[i];
+
+            std::cout << z << ": " << rho << std::endl;
+        }
+    }
 }
