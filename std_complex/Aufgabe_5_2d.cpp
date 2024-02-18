@@ -35,6 +35,19 @@ namespace
 
         std::cout << z << ": " << rho << std::endl;
     }
+
+    /**
+     * \brief Aufgabe 5.2d (p. 300) using long double
+     * \see Book1.md
+     */
+    void Aufgabe_5_2d(long double a)
+    {
+        std::complex<long double> const z(a, a);
+
+        long double const rho = std::abs(z);
+
+        std::cout << z << ": " << rho << std::endl;
+    }
 }
 
 /**
@@ -45,4 +58,5 @@ void Aufgabe_5_2d()
 {
     Aufgabe_5_2d(1.0f);
     Aufgabe_5_2d(1.0);
+    Aufgabe_5_2d(1.0L);
 }
