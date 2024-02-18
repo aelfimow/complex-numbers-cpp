@@ -4,6 +4,7 @@
 #include "Aufgabe_5_2b.h"
 #include "Aufgabe_5_2c.h"
 #include "Aufgabe_5_2d.h"
+#include "Aufgabe_5_2e.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -28,6 +29,9 @@ int main(int, char *[])
 
     std::cout << "Aufgabe_5_2d: " << std::endl;
     Aufgabe_5_2d();
+
+    std::cout << "Aufgabe_5_2e: " << std::endl;
+    Aufgabe_5_2e();
 
     return EXIT_SUCCESS;
 }
