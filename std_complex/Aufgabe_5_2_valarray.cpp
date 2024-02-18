@@ -27,7 +27,7 @@ void Aufgabe_5_2_valarray()
             { ::sqrtf(2.0f), ::sqrtf(7.0f) },
             { a, a },
             4.0if,
-            -2.0f - 2if
+            -2.0f - 2.0if
         };
 
         std::valarray<cfloat> const rhos = std::abs(zs);
@@ -36,6 +36,33 @@ void Aufgabe_5_2_valarray()
         {
             cfloat const &z = zs[i];
             cfloat const &rho = rhos[i];
+
+            std::cout << z << ": " << rho << std::endl;
+        }
+    }
+
+    // Using double
+    {
+        double const a = 1.0;
+
+        using cdouble = std::complex<double>;
+
+        std::valarray<cdouble> const zs
+        {
+            2.0 + 3.0i,
+            2.0 - 3.0i,
+            { ::sqrt(2.0), ::sqrt(7.0) },
+            { a, a },
+            4.0i,
+            -2.0 - 2.0i
+        };
+
+        std::valarray<cdouble> const rhos = std::abs(zs);
+
+        for (size_t i = 0U; i < zs.size(); ++i)
+        {
+            cdouble const &z = zs[i];
+            cdouble const &rho = rhos[i];
 
             std::cout << z << ": " << rho << std::endl;
         }
