@@ -94,4 +94,42 @@ void Aufgabe_5_2_valarray()
             std::cout << z << ": " << rho << std::endl;
         }
     }
+
+    // Using __float128
+    {
+        __float128 const a = 1.0Q;
+
+        using cfloat128 = std::complex<__float128>;
+
+        std::valarray<cfloat128> const zs
+        {
+            { 2.0Q, 3.0Q },
+            { 2.0Q, -3.0Q },
+            { ::sqrtq(2.0L), ::sqrtq(7.0L) },
+            { a, a },
+            { 0.0Q, 4.0Q },
+            { -2.0Q, -2.0Q }
+        };
+
+        std::valarray<cfloat128> rhos(zs.size());
+
+        for (size_t i = 0U; i < zs.size(); ++i)
+        {
+            cfloat128 const &z = zs[i];
+            cfloat128 &rho = rhos[i];
+
+            rho = ::sqrtq(::powq(z.real(), 2.0Q) + ::powq(z.imag(), 2.0Q));
+        }
+
+        for (size_t i = 0U; i < zs.size(); ++i)
+        {
+            cfloat128 const &z = zs[i];
+            cfloat128 const &rho = rhos[i];
+
+            bool const precise = true;
+
+            std::cout << helper::to_string(z) << ":" << std::endl;
+            std::cout << "    rho = " << helper::to_string(rho, precise) << std::endl;
+        }
+    }
 }
