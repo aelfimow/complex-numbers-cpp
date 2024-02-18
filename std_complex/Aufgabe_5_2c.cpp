@@ -55,7 +55,7 @@ void Aufgabe_5_2c()
 
         bool const precise = true;
 
-        std::cout << helper::to_string(z) << ":" << std::endl;
+        std::cout << helper::to_string(z, precise) << ":" << std::endl;
         std::cout << "    rho1 = " << helper::to_string(rho1, precise) << std::endl;
         std::cout << "    rho2 = " << helper::to_string(rho2, precise) << std::endl;
         std::cout << "    diff = " << helper::to_string(diff, precise) << std::endl;
