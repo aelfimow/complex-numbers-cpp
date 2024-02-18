@@ -3,6 +3,6 @@
 #else
 #define AUFGABE_5_2F_H
 
-extern void Aufgabe_5_2e();
+extern void Aufgabe_5_2f();
 
 #endif
