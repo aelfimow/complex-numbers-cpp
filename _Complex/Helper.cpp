@@ -57,3 +57,26 @@ std::string helper::to_string(_Complex float const &value, bool precise)
 
     return ss.str();
 }
+
+/**
+ * \brief Helper to convert _Complex double to std::string
+ */
+std::string helper::to_string(_Complex double const &value, bool precise)
+{
+    std::ostringstream ss;
+
+    ss << "(";
+
+    if (precise)
+    {
+        ss << std::setprecision(10) << __real__ value << ", " << __imag__ value;
+    }
+    else
+    {
+        ss << __real__ value << ", " << __imag__ value;
+    }
+
+    ss << ")";
+
+    return ss.str();
+}
