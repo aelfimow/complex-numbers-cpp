@@ -1,6 +1,8 @@
 #include "Helper.h"
 
 #include <vector>
+#include <sstream>
+#include <iomanip>
 #include <quadmath.h>
 
 /**
@@ -31,4 +33,27 @@ std::string helper::to_string(std::complex<__float128> const &value, bool precis
     str.append(")");
 
     return str;
+}
+
+/**
+ * \brief Helper to convert _Complex float to std::string
+ */
+std::string helper::to_string(_Complex float const &value, bool precise)
+{
+    std::ostringstream ss;
+
+    ss << "(";
+
+    if (precise)
+    {
+        ss << std::setprecision(10) << __real__ value << ", " << __imag__ value;
+    }
+    else
+    {
+        ss << __real__ value << ", " << __imag__ value;
+    }
+
+    ss << ")";
+
+    return ss.str();
 }
