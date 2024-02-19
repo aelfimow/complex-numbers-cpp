@@ -32,4 +32,11 @@ void Beispiel_5_1()
         std::cout << helper::to_string(z) << std::endl;
         std::cout << "Re(z) = " << __real__ z << ", Im(z) = " << __imag__ z << std::endl;
     }
+    // Using: long double
+    {
+        _Complex long double z = 3.0L + 7.0Li;
+
+        std::cout << helper::to_string(z) << std::endl;
+        std::cout << "Re(z) = " << __real__ z << ", Im(z) = " << __imag__ z << std::endl;
+    }
 }
