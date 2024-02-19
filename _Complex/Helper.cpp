@@ -103,3 +103,19 @@ std::string helper::to_string(_Complex long double const &value, bool precise)
 
     return ss.str();
 }
+
+/**
+ * \brief Helper to convert __complex128 to std::string
+ */
+std::string helper::to_string(__complex128 const &value, bool precise)
+{
+    std::string str { };
+
+    str.append("(");
+    str.append(to_string(__real__ value, precise));
+    str.append(", ");
+    str.append(to_string(__imag__ value, precise));
+    str.append(")");
+
+    return str;
+}
