@@ -5,6 +5,7 @@
 
 #include <string>
 #include <complex>
+#include <quadmath.h>
 
 namespace helper
 {
@@ -15,6 +16,7 @@ namespace helper
     extern std::string to_string(_Complex float const &value, bool precise = false);
     extern std::string to_string(_Complex double const &value, bool precise = false);
     extern std::string to_string(_Complex long double const &value, bool precise = false);
+    extern std::string to_string(__complex128 const &value, bool precise = false);
 }
 
 #endif
