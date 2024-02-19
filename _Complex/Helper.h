@@ -13,6 +13,7 @@ namespace helper
     extern std::string to_string(std::complex<__float128> const &value, bool precise = false);
 
     extern std::string to_string(_Complex float const &value, bool precise = false);
+    extern std::string to_string(_Complex double const &value, bool precise = false);
 }
 
 #endif
