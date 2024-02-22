@@ -40,7 +40,7 @@ void Beispiel_5_1()
         std::cout << helper::to_string(z) << std::endl;
         std::cout << "Re(z) = " << __real__ z << ", Im(z) = " << __imag__ z << std::endl;
     }
-    // Using: __float128
+    // Using: __complex128
     {
         __complex128 const z = 3.0Q + 7.0Qi;
 
@@ -73,7 +73,7 @@ void Beispiel_5_1()
         std::cout << helper::to_string(z) << std::endl;
         std::cout << "Re(z) = " << __real__ z << ", Im(z) = " << __imag__ z << std::endl;
     }
-    // Using: __float128
+    // Using: __complex128
     {
         __complex128 const z = -3.0Q - 7.0Qi;
 
@@ -106,7 +106,7 @@ void Beispiel_5_1()
         std::cout << helper::to_string(z) << std::endl;
         std::cout << "Re(z) = " << __real__ z << ", Im(z) = " << __imag__ z << std::endl;
     }
-    // Using: __float128
+    // Using: __complex128
     {
         __complex128 const z = 2.0Qi;
 
@@ -139,7 +139,7 @@ void Beispiel_5_1()
         std::cout << helper::to_string(z) << std::endl;
         std::cout << "Re(z) = " << __real__ z << ", Im(z) = " << __imag__ z << std::endl;
     }
-    // Using: __float128
+    // Using: __complex128
     {
         __complex128 const z = 12.0Q;
 
