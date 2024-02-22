@@ -113,4 +113,37 @@ void Beispiel_5_1()
         std::cout << helper::to_string(z) << std::endl;
         std::cout << "Re(z) = " << helper::to_string(__real__ z) << ", Im(z) = " << helper::to_string(__imag__ z) << std::endl;
     }
+
+    std::cout << std::endl;
+    std::cout << "z = 12" << std::endl;
+
+    // z = 12
+    // Using: float
+    {
+        _Complex float const z = 12.0f;
+
+        std::cout << helper::to_string(z) << std::endl;
+        std::cout << "Re(z) = " << __real__ z << ", Im(z) = " << __imag__ z << std::endl;
+    }
+    // Using: double
+    {
+        _Complex double const z = 12.0;
+
+        std::cout << helper::to_string(z) << std::endl;
+        std::cout << "Re(z) = " << __real__ z << ", Im(z) = " << __imag__ z << std::endl;
+    }
+    // Using: long double
+    {
+        _Complex long double const z = 12.0L;
+
+        std::cout << helper::to_string(z) << std::endl;
+        std::cout << "Re(z) = " << __real__ z << ", Im(z) = " << __imag__ z << std::endl;
+    }
+    // Using: __float128
+    {
+        __complex128 const z = 12.0Q;
+
+        std::cout << helper::to_string(z) << std::endl;
+        std::cout << "Re(z) = " << helper::to_string(__real__ z) << ", Im(z) = " << helper::to_string(__imag__ z) << std::endl;
+    }
 }
