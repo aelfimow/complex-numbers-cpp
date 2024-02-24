@@ -98,4 +98,11 @@ void Beispiel_5_2()
 
         std::cout << helper::to_string(z) << " -> " << helper::to_string(cz) << std::endl;
     }
+    // Using: double
+    {
+        _Complex double const z = 3.0 + 4.0j;
+        _Complex double const cz = conjugate(z);
+
+        std::cout << helper::to_string(z) << " -> " << helper::to_string(cz) << std::endl;
+    }
 }
