@@ -16,6 +16,15 @@ namespace
 
         return result;
     }
+
+    _Complex double conjugate(_Complex double const &z)
+    {
+        _Complex double result = z;
+
+        __imag__ result *= -1.0;
+
+        return result;
+    }
 }
 
 /**
@@ -32,6 +41,16 @@ void Beispiel_5_2()
     {
         _Complex float const z = 3.0f - 4.0fi;
         _Complex float const cz = conjugate(z);
+
+        std::cout << helper::to_string(z) << " -> " << helper::to_string(cz) << std::endl;
+    }
+    // Using: double
+    {
+#if 0
+        _Complex double const z = 3.0 - 4.0i; // Compiler complains about std::complex<double>
+#endif
+        _Complex double const z = 3.0 - 4.0j;
+        _Complex double const cz = conjugate(z);
 
         std::cout << helper::to_string(z) << " -> " << helper::to_string(cz) << std::endl;
     }
