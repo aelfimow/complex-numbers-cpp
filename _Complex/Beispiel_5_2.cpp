@@ -152,4 +152,16 @@ void Beispiel_5_2()
 
         std::cout << helper::to_string(z) << " -> " << helper::to_string(cz) << std::endl;
     }
+
+    std::cout << std::endl;
+    std::cout << "conjugate: z = 5" << std::endl;
+
+    // z = 5
+    // Using: float
+    {
+        _Complex float const z = 5.0f;
+        _Complex float const cz = conjugate(z);
+
+        std::cout << helper::to_string(z) << " -> " << helper::to_string(cz) << std::endl;
+    }
 }
