@@ -25,6 +25,15 @@ namespace
 
         return result;
     }
+
+    _Complex long double conjugate(_Complex long double const &z)
+    {
+        _Complex long double result = z;
+
+        __imag__ result *= -1.0L;
+
+        return result;
+    }
 }
 
 /**
@@ -51,6 +60,13 @@ void Beispiel_5_2()
 #endif
         _Complex double const z = 3.0 - 4.0j;
         _Complex double const cz = conjugate(z);
+
+        std::cout << helper::to_string(z) << " -> " << helper::to_string(cz) << std::endl;
+    }
+    // Using: long double
+    {
+        _Complex long double const z = 3.0L - 4.0Li;
+        _Complex long double const cz = conjugate(z);
 
         std::cout << helper::to_string(z) << " -> " << helper::to_string(cz) << std::endl;
     }
