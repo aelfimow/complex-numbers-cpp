@@ -112,4 +112,11 @@ void Beispiel_5_2()
 
         std::cout << helper::to_string(z) << " -> " << helper::to_string(cz) << std::endl;
     }
+    // Using: __complex128
+    {
+        __complex128 const z = 3.0Q + 4.0Qi;
+        __complex128 const cz = conjugate(z);
+
+        std::cout << helper::to_string(z) << " -> " << helper::to_string(cz) << std::endl;
+    }
 }
