@@ -34,6 +34,15 @@ namespace
 
         return result;
     }
+
+    __complex128 conjugate(__complex128 const &z)
+    {
+        __complex128 result = z;
+
+        __imag__ result *= -1.0Q;
+
+        return result;
+    }
 }
 
 /**
@@ -67,6 +76,13 @@ void Beispiel_5_2()
     {
         _Complex long double const z = 3.0L - 4.0Li;
         _Complex long double const cz = conjugate(z);
+
+        std::cout << helper::to_string(z) << " -> " << helper::to_string(cz) << std::endl;
+    }
+    // Using: __complex128
+    {
+        __complex128 const z = 3.0Q - 4.0Qi;
+        __complex128 const cz = conjugate(z);
 
         std::cout << helper::to_string(z) << " -> " << helper::to_string(cz) << std::endl;
     }
