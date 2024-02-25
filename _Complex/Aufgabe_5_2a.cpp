@@ -36,6 +36,16 @@ namespace
 
         return rho;
     }
+
+    __float128 abs(__complex128 const &z)
+    {
+        __float128 const r2 = ::powq(__real__ z, 2.0Q);
+        __float128 const i2 = ::powq(__imag__ z, 2.0Q);
+
+        __float128 const rho = ::sqrtq(r2 + i2);
+
+        return rho;
+    }
 }
 
 /**
@@ -69,5 +79,14 @@ void Aufgabe_5_2a()
         long double const rho = abs(z);
 
         std::cout << helper::to_string(z) << ": " << rho << std::endl;
+    }
+
+    // Using: __complex128
+    {
+        __complex128 const z = 2.0Q + 3.0Qi;
+
+        __float128 const rho = abs(z);
+
+        std::cout << helper::to_string(z) << ": " << helper::to_string(rho) << std::endl;
     }
 }
