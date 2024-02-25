@@ -26,6 +26,16 @@ namespace
 
         return rho;
     }
+
+    long double abs(_Complex long double const &z)
+    {
+        long double const r2 = ::powl(__real__ z, 2.0);
+        long double const i2 = ::powl(__imag__ z, 2.0);
+
+        long double const rho = ::sqrtl(r2 + i2);
+
+        return rho;
+    }
 }
 
 /**
@@ -48,6 +58,15 @@ void Aufgabe_5_2a()
         _Complex double const z = 2.0 + 3.0j;
 
         double const rho = abs(z);
+
+        std::cout << helper::to_string(z) << ": " << rho << std::endl;
+    }
+
+    // Using long double
+    {
+        _Complex long double const z = 2.0L + 3.0Li;
+
+        long double const rho = abs(z);
 
         std::cout << helper::to_string(z) << ": " << rho << std::endl;
     }
