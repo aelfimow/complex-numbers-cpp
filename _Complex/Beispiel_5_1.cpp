@@ -7,8 +7,8 @@
 using namespace std::complex_literals;
 
 /**
- * \brief Beispiel 5.1 (p. 297)
- * \see Book1.md
+ * \brief Beispiel 5.1
+ * \see Book1.md, (Seite 297)
  */
 void Beispiel_5_1()
 {
