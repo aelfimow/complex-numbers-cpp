@@ -1,9 +1,11 @@
+#include <cmath>
+#include <iostream>
+
 #include "Helper.h"
 
 #include <vector>
 #include <sstream>
 #include <iomanip>
-#include <quadmath.h>
 
 /**
  * \brief Helper to convert __float128 to std::string
@@ -118,4 +120,56 @@ std::string helper::to_string(__complex128 const &value, bool precise)
     str.append(")");
 
     return str;
+}
+
+/**
+ * \brief Computes the magnitude of the complex number
+ */
+float helper::abs(_Complex float const &z)
+{
+    float const r2 = ::powf(__real__ z, 2.0f);
+    float const i2 = ::powf(__imag__ z, 2.0f);
+
+    float const rho = ::sqrtf(r2 + i2);
+
+    return rho;
+}
+
+/**
+ * \brief Computes the magnitude of the complex number
+ */
+double helper::abs(_Complex double const &z)
+{
+    double const r2 = ::pow(__real__ z, 2.0);
+    double const i2 = ::pow(__imag__ z, 2.0);
+
+    double const rho = ::sqrt(r2 + i2);
+
+    return rho;
+}
+
+/**
+ * \brief Computes the magnitude of the complex number
+ */
+long double helper::abs(_Complex long double const &z)
+{
+    long double const r2 = ::powl(__real__ z, 2.0);
+    long double const i2 = ::powl(__imag__ z, 2.0);
+
+    long double const rho = ::sqrtl(r2 + i2);
+
+    return rho;
+}
+
+/**
+ * \brief Computes the magnitude of the complex number
+ */
+__float128 helper::abs(__complex128 const &z)
+{
+    __float128 const r2 = ::powq(__real__ z, 2.0Q);
+    __float128 const i2 = ::powq(__imag__ z, 2.0Q);
+
+    __float128 const rho = ::sqrtq(r2 + i2);
+
+    return rho;
 }
