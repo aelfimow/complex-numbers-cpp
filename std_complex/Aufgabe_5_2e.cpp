@@ -8,8 +8,8 @@
 using namespace std::complex_literals;
 
 /**
- * \brief Aufgabe 5.2e (p. 300)
- * \see Book1.md
+ * \brief Aufgabe 5.2e
+ * \see Book1.md, (Seite 300)
  */
 void Aufgabe_5_2e()
 {
