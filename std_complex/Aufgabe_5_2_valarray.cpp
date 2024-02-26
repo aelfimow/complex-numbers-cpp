@@ -9,8 +9,8 @@
 using namespace std::complex_literals;
 
 /**
- * \brief Aufgabe 5.2 (p. 300) using std::valarray
- * \see Book1.md
+ * \brief Aufgabe 5.2 using std::valarray
+ * \see Book1.md, (Seite 300)
  */
 void Aufgabe_5_2_valarray()
 {
