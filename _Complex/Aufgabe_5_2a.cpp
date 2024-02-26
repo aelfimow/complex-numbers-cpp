@@ -6,8 +6,8 @@
 #include <quadmath.h>
 
 /**
- * \brief Aufgabe 5.2a (p. 300)
- * \see Book1.md
+ * \brief Aufgabe 5.2a
+ * \see Book1.md, (Seite 300)
  */
 void Aufgabe_5_2a()
 {
