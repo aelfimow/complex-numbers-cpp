@@ -11,8 +11,8 @@ using namespace std::complex_literals;
 namespace
 {
     /**
-     * \brief Aufgabe 5.2d (p. 300) using float
-     * \see Book1.md
+     * \brief Aufgabe 5.2d using float
+     * \see Book1.md, (Seite 300)
      */
     void Aufgabe_5_2d(float a)
     {
@@ -24,8 +24,8 @@ namespace
     }
 
     /**
-     * \brief Aufgabe 5.2d (p. 300) using double
-     * \see Book1.md
+     * \brief Aufgabe 5.2d using double
+     * \see Book1.md, (Seite 300)
      */
     void Aufgabe_5_2d(double a)
     {
@@ -37,8 +37,8 @@ namespace
     }
 
     /**
-     * \brief Aufgabe 5.2d (p. 300) using long double
-     * \see Book1.md
+     * \brief Aufgabe 5.2d using long double
+     * \see Book1.md, (Seite 300)
      */
     void Aufgabe_5_2d(long double a)
     {
@@ -50,8 +50,8 @@ namespace
     }
 
     /**
-     * \brief Aufgabe 5.2d (p. 300) using __float128
-     * \see Book1.md
+     * \brief Aufgabe 5.2d using __float128
+     * \see Book1.md, (Seite 300)
      */
     void Aufgabe_5_2d(__float128 a)
     {
@@ -75,8 +75,8 @@ namespace
 }
 
 /**
- * \brief Aufgabe 5.2d (p. 300)
- * \see Book1.md
+ * \brief Aufgabe 5.2d
+ * \see Book1.md, (Seite 300)
  */
 void Aufgabe_5_2d()
 {
