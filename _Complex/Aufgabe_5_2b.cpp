@@ -39,4 +39,13 @@ void Aufgabe_5_2b()
 
         std::cout << helper::to_string(z) << ": " << rho << std::endl;
     }
+
+    // Using: __complex128
+    {
+        __complex128 const z = 2.0Q - 3.0Qi;
+
+        __float128 const rho = helper::abs(z);
+
+        std::cout << helper::to_string(z) << ": " << helper::to_string(rho) << std::endl;
+    }
 }
