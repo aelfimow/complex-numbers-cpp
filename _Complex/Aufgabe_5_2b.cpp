@@ -21,4 +21,13 @@ void Aufgabe_5_2b()
 
         std::cout << helper::to_string(z) << ": " << rho << std::endl;
     }
+
+    // Using double
+    {
+        _Complex double const z = 2.0 - 3.0j;
+
+        double const rho = helper::abs(z);
+
+        std::cout << helper::to_string(z) << ": " << rho << std::endl;
+    }
 }
