@@ -46,8 +46,8 @@ namespace
 }
 
 /**
- * \brief Beispiel 5.2 (p. 297)
- * \see Book1.md
+ * \brief Beispiel 5.2
+ * \see Book1.md, (Seite 297)
  */
 void Beispiel_5_2()
 {
