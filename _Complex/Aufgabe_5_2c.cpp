@@ -21,4 +21,13 @@ void Aufgabe_5_2c()
 
         std::cout << helper::to_string(z) << ": " << rho << std::endl;
     }
+
+    // Using double
+    {
+        _Complex double const z = ::sqrt(2.0) + (::sqrt(7.0) * 1.0j);
+
+        double const rho = helper::abs(z);
+
+        std::cout << helper::to_string(z) << ": " << rho << std::endl;
+    }
 }
