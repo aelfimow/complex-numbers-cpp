@@ -30,4 +30,13 @@ void Aufgabe_5_2c()
 
         std::cout << helper::to_string(z) << ": " << rho << std::endl;
     }
+
+    // Using long double
+    {
+        _Complex long double const z = ::sqrtl(2.0L) + (::sqrtl(7.0L) * 1.0Li);
+
+        long double const rho = helper::abs(z);
+
+        std::cout << helper::to_string(z) << ": " << rho << std::endl;
+    }
 }
