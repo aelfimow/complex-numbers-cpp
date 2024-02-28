@@ -19,7 +19,7 @@ namespace
 
         float const rho = helper::abs(z);
 
-        std::cout << helper::to_string(z) << ": " << rho << std::endl;
+        std::cout << "using float: " << helper::to_string(z) << ": " << rho << std::endl;
     }
 
     /**
@@ -32,7 +32,7 @@ namespace
 
         double const rho = helper::abs(z);
 
-        std::cout << helper::to_string(z) << ": " << rho << std::endl;
+        std::cout << "using double: " << helper::to_string(z) << ": " << rho << std::endl;
     }
 
     /**
@@ -45,7 +45,7 @@ namespace
 
         long double const rho = helper::abs(z);
 
-        std::cout << helper::to_string(z) << ": " << rho << std::endl;
+        std::cout << "using long double: " << helper::to_string(z) << ": " << rho << std::endl;
     }
 
     /**
@@ -58,7 +58,7 @@ namespace
 
         __float128 const rho = helper::abs(z);
 
-        std::cout << helper::to_string(z) << ": " << helper::to_string(rho) << std::endl;
+        std::cout << "using __complex128: " << helper::to_string(z) << ": " << helper::to_string(rho) << std::endl;
     }
 }
 
