@@ -39,4 +39,13 @@ void Aufgabe_5_2c()
 
         std::cout << helper::to_string(z) << ": " << rho << std::endl;
     }
+
+    // Using __complex128
+    {
+        __complex128 const z = ::sqrtq(2.0Q) + (::sqrtq(7.0Q) * 1.0Qi);
+
+        __float128 const rho = helper::abs(z);
+
+        std::cout << helper::to_string(z) << ": " << helper::to_string(rho) << std::endl;
+    }
 }
