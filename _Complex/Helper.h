@@ -26,6 +26,7 @@ namespace helper
     long double abs(_Complex long double const &z);
     std::valarray<long double> abs(std::valarray<_Complex long double> const &z);
     __float128 abs(__complex128 const &z);
+    std::valarray<__float128> abs(std::valarray<__complex128> const &z);
 }
 
 #endif
