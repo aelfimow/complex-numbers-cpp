@@ -136,6 +136,21 @@ float helper::abs(_Complex float const &z)
 }
 
 /**
+ * \brief Computes the magnitude of the complex numbers in std::valarray
+ */
+std::valarray<float> helper::abs(std::valarray<_Complex float> const &z)
+{
+    std::valarray<float> rhos(z.size());
+
+    for (size_t i = 0U; i < z.size(); ++i)
+    {
+        rhos[i] = helper::abs(z[i]);
+    }
+
+    return rhos;
+}
+
+/**
  * \brief Computes the magnitude of the complex number
  */
 double helper::abs(_Complex double const &z)
