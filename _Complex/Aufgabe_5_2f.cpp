@@ -27,4 +27,13 @@ void Aufgabe_5_2f()
 
         std::cout << "using double: " << helper::to_string(z) << ": " << rho << std::endl;
     }
+
+    // Using long double
+    {
+        _Complex long double const z = -2.0L - 2.0Li;
+
+        long double const rho = helper::abs(z);
+
+        std::cout << "using long double: " << helper::to_string(z) << ": " << rho << std::endl;
+    }
 }
