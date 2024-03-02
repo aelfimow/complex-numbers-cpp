@@ -61,4 +61,29 @@ void Aufgabe_5_2_valarray()
             std::cout << "with double: " << helper::to_string(z) << ": " << rho << std::endl;
         }
     }
+
+    // Using long double
+    {
+        long double const a = 1.0L;
+
+        std::valarray<_Complex long double> const zs
+        {
+            2.0L + 3.0Li,
+            2.0L - 3.0Li,
+            { ::sqrtl(2.0L), ::sqrtl(7.0L) },
+            { a, a },
+            4.0Li,
+            -2.0L - 2.0Li
+        };
+
+        std::valarray<long double> const rhos = helper::abs(zs);
+
+        for (size_t i = 0U; i < zs.size(); ++i)
+        {
+            _Complex long double const &z = zs[i];
+            long double const &rho = rhos[i];
+
+            std::cout << "with long double: " << helper::to_string(z) << ": " << rho << std::endl;
+        }
+    }
 }
