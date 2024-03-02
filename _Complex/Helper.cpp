@@ -218,3 +218,18 @@ __float128 helper::abs(__complex128 const &z)
 
     return rho;
 }
+
+/**
+ * \brief Computes the magnitude of the complex numbers in std::valarray
+ */
+std::valarray<__float128> helper::abs(std::valarray<__complex128> const &z)
+{
+    std::valarray<__float128> rhos(z.size());
+
+    for (size_t i = 0U; i < z.size(); ++i)
+    {
+        rhos[i] = helper::abs(z[i]);
+    }
+
+    return rhos;
+}
