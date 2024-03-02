@@ -36,4 +36,13 @@ void Aufgabe_5_2e()
 
         std::cout << "using long double: " << helper::to_string(z) << ": " << rho << std::endl;
     }
+
+    // Using __complex128
+    {
+        __complex128 const z = 4.0Qi;
+
+        __float128 const rho = helper::abs(z);
+
+        std::cout << "using __complex128: " << helper::to_string(z) << ": " << helper::to_string(rho) << std::endl;
+    }
 }
