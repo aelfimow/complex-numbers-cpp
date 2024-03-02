@@ -33,7 +33,32 @@ void Aufgabe_5_2_valarray()
             _Complex float const &z = zs[i];
             float const &rho = rhos[i];
 
-            std::cout << helper::to_string(z) << ": " << rho << std::endl;
+            std::cout << "with float: " << helper::to_string(z) << ": " << rho << std::endl;
+        }
+    }
+
+    // Using double
+    {
+        double const a = 1.0;
+
+        std::valarray<_Complex double> const zs
+        {
+            2.0 + 3.0j,
+            2.0 - 3.0j,
+            { ::sqrt(2.0), ::sqrt(7.0) },
+            { a, a },
+            4.0j,
+            -2.0 - 2.0j
+        };
+
+        std::valarray<double> const rhos = helper::abs(zs);
+
+        for (size_t i = 0U; i < zs.size(); ++i)
+        {
+            _Complex double const &z = zs[i];
+            double const &rho = rhos[i];
+
+            std::cout << "with double: " << helper::to_string(z) << ": " << rho << std::endl;
         }
     }
 }
