@@ -18,4 +18,13 @@ void Aufgabe_5_2e()
 
         std::cout << "using float: " << helper::to_string(z) << ": " << rho << std::endl;
     }
+
+    // Using double
+    {
+        _Complex double const z = 4.0j;
+
+        double const rho = helper::abs(z);
+
+        std::cout << "using double: " << helper::to_string(z) << ": " << rho << std::endl;
+    }
 }
