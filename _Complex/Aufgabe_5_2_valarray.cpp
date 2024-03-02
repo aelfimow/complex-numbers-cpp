@@ -86,4 +86,29 @@ void Aufgabe_5_2_valarray()
             std::cout << "with long double: " << helper::to_string(z) << ": " << rho << std::endl;
         }
     }
+
+    // Using __complex128
+    {
+        __float128 const a = 1.0Q;
+
+        std::valarray<__complex128> const zs
+        {
+            2.0Q + 3.0Qi,
+            2.0Q - 3.0Qi,
+            { ::sqrtq(2.0Q), ::sqrtq(7.0Q) },
+            { a, a },
+            4.0Qi,
+            -2.0Q - 2.0Qi
+        };
+
+        std::valarray<__float128> const rhos = helper::abs(zs);
+
+        for (size_t i = 0U; i < zs.size(); ++i)
+        {
+            __complex128 const &z = zs[i];
+            __float128 const &rho = rhos[i];
+
+            std::cout << "with __complex128: " << helper::to_string(z) << ": " << helper::to_string(rho) << std::endl;
+        }
+    }
 }
