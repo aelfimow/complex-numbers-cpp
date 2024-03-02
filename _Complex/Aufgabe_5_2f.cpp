@@ -12,10 +12,19 @@ void Aufgabe_5_2f()
 {
     // Using float
     {
-        _Complex float const z = 2.0f - 3.0fi;
+        _Complex float const z = -2.0f - 2.0fi;
 
         float const rho = helper::abs(z);
 
         std::cout << "using float: " << helper::to_string(z) << ": " << rho << std::endl;
+    }
+
+    // Using double
+    {
+        _Complex double const z = -2.0 - 2.0j;
+
+        double const rho = helper::abs(z);
+
+        std::cout << "using double: " << helper::to_string(z) << ": " << rho << std::endl;
     }
 }
