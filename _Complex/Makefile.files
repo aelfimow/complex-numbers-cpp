@@ -1,3 +1,5 @@
+Aufgabe_5_2_valarray.o: Aufgabe_5_2_valarray.cpp Aufgabe_5_2_valarray.h \
+ Helper.h
 Aufgabe_5_2a.o: Aufgabe_5_2a.cpp Aufgabe_5_2a.h Helper.h
 Aufgabe_5_2b.o: Aufgabe_5_2b.cpp Aufgabe_5_2b.h Helper.h
 Aufgabe_5_2c.o: Aufgabe_5_2c.cpp Aufgabe_5_2c.h Helper.h
@@ -9,4 +11,4 @@ Beispiel_5_2.o: Beispiel_5_2.cpp Beispiel_5_2.h Helper.h
 Helper.o: Helper.cpp Helper.h
 main.o: main.cpp Beispiel_5_1.h Beispiel_5_2.h Aufgabe_5_2a.h \
  Aufgabe_5_2b.h Aufgabe_5_2c.h Aufgabe_5_2d.h Aufgabe_5_2e.h \
- Aufgabe_5_2f.h
+ Aufgabe_5_2f.h Aufgabe_5_2_valarray.h
