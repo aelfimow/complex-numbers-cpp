@@ -13,6 +13,7 @@ namespace helper
     extern std::string to_string(std::complex<__float128> const &value, bool precise = false);
 
     float to_degree(float value);
+    double to_degree(double value);
 }
 
 #endif
