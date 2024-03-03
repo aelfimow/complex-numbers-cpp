@@ -4,6 +4,7 @@
 #include <cmath>
 #include <complex>
 #include <iostream>
+#include <quadmath.h>
 
 using namespace std::complex_literals;
 
@@ -45,5 +46,16 @@ void Beispiel_5_8()
         std::cout << "using long double: " << z
             << ", phi (rad) = " << phi
             << ", phi (degree) = " << degree << std::endl;
+    }
+    // Using: __float128
+    {
+        std::complex<__float128> z((2.0Q * ::sqrtq(3.0)), 2.0Q);
+
+        __float128 const phi = helper::arg(z);
+        __float128 const degree = helper::to_degree(phi);
+
+        std::cout << "using __float128: " << helper::to_string(z)
+            << ", phi (rad) = " << helper::to_string(phi)
+            << ", phi (degree) = " << helper::to_string(degree) << std::endl;
     }
 }
