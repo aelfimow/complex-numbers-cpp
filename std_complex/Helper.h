@@ -14,6 +14,7 @@ namespace helper
 
     float to_degree(float value);
     double to_degree(double value);
+    long double to_degree(long double value);
 }
 
 #endif
