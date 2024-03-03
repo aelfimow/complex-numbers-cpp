@@ -12,9 +12,10 @@ namespace helper
 
     extern std::string to_string(std::complex<__float128> const &value, bool precise = false);
 
-    float to_degree(float value);
-    double to_degree(double value);
-    long double to_degree(long double value);
+    extern float to_degree(float value);
+    extern double to_degree(double value);
+    extern long double to_degree(long double value);
+    extern __float128 to_degree(__float128 value);
 }
 
 #endif
