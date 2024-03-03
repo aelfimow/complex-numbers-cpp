@@ -16,6 +16,8 @@ namespace helper
     extern double to_degree(double value);
     extern long double to_degree(long double value);
     extern __float128 to_degree(__float128 value);
+
+    extern __float128 arg(std::complex<__float128> const &z);
 }
 
 #endif
