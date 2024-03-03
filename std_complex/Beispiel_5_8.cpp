@@ -35,4 +35,15 @@ void Beispiel_5_8()
             << ", phi (rad) = " << phi
             << ", phi (degree) = " << degree << std::endl;
     }
+    // Using: long double
+    {
+        std::complex<long double> z = (2.0L * ::sqrtl(3.0L)) + 2.0Li;
+
+        long double const phi = std::arg(z);
+        long double const degree = helper::to_degree(phi);
+
+        std::cout << "using long double: " << z
+            << ", phi (rad) = " << phi
+            << ", phi (degree) = " << degree << std::endl;
+    }
 }
