@@ -56,3 +56,15 @@ double helper::to_degree(double value)
 
     return degree;
 }
+
+/**
+ * \brief Convert value from radians to degree
+ */
+long double helper::to_degree(long double value)
+{
+    long double const pi = 3.1415926535897932384626433832795L;
+
+    long double const degree = ((180.0 * value) / pi);
+
+    return degree;
+}
