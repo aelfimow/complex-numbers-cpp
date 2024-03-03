@@ -78,3 +78,13 @@ __float128 helper::to_degree(__float128 value)
 
     return degree;
 }
+
+/**
+ * \brief Compute the phase angle of complex number z
+ */
+__float128 helper::arg(std::complex<__float128> const &z)
+{
+    __float128 const phi = ::atan2q(z.imag(), z.real());
+
+    return phi;
+}
