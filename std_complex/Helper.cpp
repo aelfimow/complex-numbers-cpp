@@ -64,7 +64,17 @@ long double helper::to_degree(long double value)
 {
     long double const pi = 3.1415926535897932384626433832795L;
 
-    long double const degree = ((180.0 * value) / pi);
+    long double const degree = ((180.0L * value) / pi);
+
+    return degree;
+}
+
+/**
+ * \brief Convert value from radians to degree
+ */
+__float128 helper::to_degree(__float128 value)
+{
+    __float128 const degree = ((180.0Q * value) / M_PIq);
 
     return degree;
 }
