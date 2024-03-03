@@ -8,7 +8,8 @@ Aufgabe_5_2e.o: Aufgabe_5_2e.cpp Aufgabe_5_2e.h Helper.h
 Aufgabe_5_2f.o: Aufgabe_5_2f.cpp Aufgabe_5_2f.h Helper.h
 Beispiel_5_1.o: Beispiel_5_1.cpp Beispiel_5_1.h Helper.h
 Beispiel_5_2.o: Beispiel_5_2.cpp Beispiel_5_2.h Helper.h
+Beispiel_5_8.o: Beispiel_5_8.cpp Beispiel_5_8.h Helper.h
 Helper.o: Helper.cpp Helper.h
 main.o: main.cpp Beispiel_5_1.h Beispiel_5_2.h Aufgabe_5_2a.h \
  Aufgabe_5_2b.h Aufgabe_5_2c.h Aufgabe_5_2d.h Aufgabe_5_2e.h \
- Aufgabe_5_2f.h Aufgabe_5_2_valarray.h
+ Aufgabe_5_2f.h Aufgabe_5_2_valarray.h Beispiel_5_8.h
