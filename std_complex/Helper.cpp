@@ -32,3 +32,15 @@ std::string helper::to_string(std::complex<__float128> const &value, bool precis
 
     return str;
 }
+
+/**
+ * \brief Convert value from radians to degree
+ */
+float helper::to_degree(float value)
+{
+    float const pi = 3.1415926535897932384626433832795f;
+
+    float const degree = ((180.0f * value) / pi);
+
+    return degree;
+}
