@@ -44,3 +44,15 @@ float helper::to_degree(float value)
 
     return degree;
 }
+
+/**
+ * \brief Convert value from radians to degree
+ */
+double helper::to_degree(double value)
+{
+    double const pi = 3.1415926535897932384626433832795;
+
+    double const degree = ((180.0 * value) / pi);
+
+    return degree;
+}
