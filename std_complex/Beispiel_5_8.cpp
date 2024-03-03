@@ -24,4 +24,15 @@ void Beispiel_5_8()
             << ", phi (rad) = " << phi
             << ", phi (degree) = " << degree << std::endl;
     }
+    // Using: double
+    {
+        std::complex<double> z = (2.0 * ::sqrt(3.0)) + 2.0i;
+
+        double const phi = std::arg(z);
+        double const degree = helper::to_degree(phi);
+
+        std::cout << "using double: " << z
+            << ", phi (rad) = " << phi
+            << ", phi (degree) = " << degree << std::endl;
+    }
 }
