@@ -36,4 +36,15 @@ void Beispiel_5_9()
 
         std::cout << "using double: " << z << "; imag^2: " << i2 << std::endl;
     }
+
+    // Using: double
+    {
+        long double const alpha = ((5.0L * std::numbers::pi_v<long double>) / 3.0L);
+
+        std::complex<long double> const z = (2.0L * (::cosl(alpha) + (1.0Li * ::sinl(alpha))));
+
+        long double const i2 = (z.imag() * z.imag());
+
+        std::cout << "using long double: " << z << "; imag^2: " << i2 << std::endl;
+    }
 }
