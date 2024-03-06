@@ -8,6 +8,7 @@
 #include "Aufgabe_5_2f.h"
 #include "Aufgabe_5_2_valarray.h"
 #include "Beispiel_5_8.h"
+#include "Beispiel_5_9.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -44,6 +45,9 @@ int main(int, char *[])
 
     std::cout << "Beispiel_5_8: " << std::endl;
     Beispiel_5_8();
+
+    std::cout << "Beispiel_5_9: " << std::endl;
+    Beispiel_5_9();
 
     return EXIT_SUCCESS;
 }
