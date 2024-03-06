@@ -37,7 +37,7 @@ void Beispiel_5_9()
         std::cout << "using double: " << z << "; imag^2: " << i2 << std::endl;
     }
 
-    // Using: double
+    // Using: long double
     {
         long double const alpha = ((5.0L * std::numbers::pi_v<long double>) / 3.0L);
 
@@ -46,5 +46,16 @@ void Beispiel_5_9()
         long double const i2 = (z.imag() * z.imag());
 
         std::cout << "using long double: " << z << "; imag^2: " << i2 << std::endl;
+    }
+
+    // Using: __float128
+    {
+        __float128 const alpha = ((5.0Q * M_PIq) / 3.0Q);
+
+        std::complex<__float128> const z((2.0Q * ::cosq(alpha)), (2.0Q * ::sinq(alpha)));
+
+        __float128 const i2 = (z.imag() * z.imag());
+
+        std::cout << "using __float128: " << helper::to_string(z) << "; imag^2: " << helper::to_string(i2) << std::endl;
     }
 }
