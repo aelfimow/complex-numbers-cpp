@@ -21,6 +21,8 @@ void Beispiel_5_9()
 
         std::complex<float> const z = (2.0f * (::cosf(alpha) + (1.0fi * ::sinf(alpha))));
 
-        std::cout << "using float: " << z << std::endl;
+        float const i2 = (z.imag() * z.imag());
+
+        std::cout << "using float: " << z << "; imag^2: " << i2 << std::endl;
     }
 }
