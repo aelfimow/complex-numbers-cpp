@@ -9,7 +9,7 @@ using namespace std::complex_literals;
 
 /**
  * \brief p419_Problem_3a
- * \see Book2.md, (page 419, Problem 3)
+ * \see Book2.md, (page 419, Problem 3 (a))
  */
 void p419_Problem_3a()
 {
@@ -41,6 +41,47 @@ void p419_Problem_3a()
     {
         std::complex<__float128> const z(0.0Q, 1.0Q);
         std::complex<__float128> const result = std::pow(z, 3);
+
+        bool const precise = true;
+
+        std::cout << "result (__float128): " << helper::to_string(result, precise) << std::endl;
+    }
+}
+
+/**
+ * \brief p419_Problem_3b
+ * \see Book2.md, (page 419, Problem 3 (b))
+ */
+void p419_Problem_3b()
+{
+    // Using float
+    {
+        std::complex<float> const z = 0.0f + 1.0if;
+        std::complex<float> const result = std::pow(z, 4);
+
+        std::cout << "result (float): " << result << std::endl;
+    }
+
+    // Using double
+    {
+        std::complex<double> const z = 0.0 + 1.0i;
+        std::complex<double> const result = std::pow(z, 4);
+
+        std::cout << "result (double): " << result << std::endl;
+    }
+
+    // Using long double
+    {
+        std::complex<long double> const z = 0.0L + 1.0iL;
+        std::complex<long double> const result = std::pow(z, 4);
+
+        std::cout << "result (long double): " << result << std::endl;
+    }
+
+    // Using __float128
+    {
+        std::complex<__float128> const z(0.0Q, 1.0Q);
+        std::complex<__float128> const result = std::pow(z, 4);
 
         bool const precise = true;
 
