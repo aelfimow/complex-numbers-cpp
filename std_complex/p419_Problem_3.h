@@ -5,5 +5,6 @@
 
 extern void p419_Problem_3a();
 extern void p419_Problem_3b();
+extern void p419_Problem_3c();
 
 #endif
