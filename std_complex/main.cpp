@@ -53,5 +53,8 @@ int main(int, char *[])
     std::cout << "p419_Problem_3 (a): " << std::endl;
     p419_Problem_3a();
 
+    std::cout << "p419_Problem_3 (b): " << std::endl;
+    p419_Problem_3b();
+
     return EXIT_SUCCESS;
 }
