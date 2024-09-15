@@ -14,3 +14,4 @@ Helper.o: Helper.cpp Helper.h
 main.o: main.cpp Beispiel_5_1.h Beispiel_5_2.h Aufgabe_5_2a.h \
  Aufgabe_5_2b.h Aufgabe_5_2c.h Aufgabe_5_2d.h Aufgabe_5_2e.h \
  Aufgabe_5_2f.h Aufgabe_5_2_valarray.h Beispiel_5_8.h Beispiel_5_9.h
+p419_Problem_3.o: p419_Problem_3.cpp p419_Problem_3.h Helper.h
